@@ -70,12 +70,39 @@ Start the application:
 
 The app should now be running at http://localhost:8000.
 
-Now , for the frontend :
-First clone the following repository :
+## Frontend Setup
 
-    https://github.com/Jayesh-Ru/Book-Station_frontend.git
-Then install dependencies by : npm i
-Then setup env and start the app by : npm run serve
+To set up the frontend, follow these steps:
+
+1. Clone the frontend repository:
+
+    ```bash
+    git clone https://github.com/Jayesh-Ru/Book-Station_frontend.git
+    ```
+
+2. Install dependencies:
+
+    ```bash
+    npm i
+    ```
+
+3. Set up environment variables:
+
+   ``` Ensure your environment is properly configured. ```
+
+
+4. Set Proxy in 'vue.config.js' to the url where our backend is running:
+    ```
+        target: "http://localhost:8000"
+    ```   
+5. Start the application:
+
+    ```bash
+    npm run serve
+    ```
+
+This will initiate the frontend application. Make sure to follow these steps to run the Book-Station frontend successfully.
+
 
 
 
