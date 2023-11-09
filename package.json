@@ -4,8 +4,8 @@
 	"description": "Full stack MongoDB Express Vue Nodejs SPA",
 	"main": "./server/index.js",
 	"scripts": {
-		"start": "node server/index.js",
-		"server": "nodemon server/index.js",
+		"start": "node index.js",
+		"server": "nodemon index.js",
 		"client": "npm run serve --prefix client",
 		"dev": "concurrently \"npm run server\" \"npm run client\""
 	},
