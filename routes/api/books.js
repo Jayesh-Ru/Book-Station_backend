@@ -3,7 +3,6 @@ const Book = require("../../models/Book");
 
 const router = express.Router();
 router.get("/", async (req, res) => {
-	console.log('inside get',Book.collection);
 	const books = await Book.find({});
 	res.send(books);
 });
@@ -21,12 +20,12 @@ router.post("/", async (req, res) => {
 		summary: req.body.summary,
 	});
 	await book.save();
-	res.send({ msg: "assd" });
+	res.send({ msg: "succesfull" });
 });
 
 router.delete("/:id", async (req, res) => {
 	await Book.deleteOne({ _id: req.params.id });
-	res.send({ msg: "dmdmd" });
+	res.send({ msg: "succesfull" });
 });
 
 router.put("/:id", async (req, res) => {
@@ -34,7 +33,7 @@ router.put("/:id", async (req, res) => {
 		{ _id: req.params.id },
 		{ title: req.body.title,author: req.body.author, summary: req.body.summary }
 	);
-	res.send({ msg: "sdfsd" });
+	res.send({ msg: "succesfull" });
 });
 
 module.exports = router;
